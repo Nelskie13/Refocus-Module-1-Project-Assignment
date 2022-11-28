@@ -16,7 +16,7 @@ test("If search function is working?",()=>{
   "Marie Colvin shined a light on war-torn corners of the world")
 });
 test("If Sort Function is working in ascending?" ,() =>{
-  expect(sort("ascending")).toBe([
+  expect(sort("ascending")).toStrictEqual([
     "'Nightmare' TV show 'Euphoria — health threat or high art?",
     'Buried underpants and tea bags help scientists evaluate soil',
     'Decoder: Armenia in a bind as Ukraine war resets global order',
@@ -28,7 +28,7 @@ test("If Sort Function is working in ascending?" ,() =>{
   ]);
 });
 test("If Sort Function is working in descending" ,() =>{
-  expect(sort("descending")).toBe([
+  expect(sort("descending")).toStrictEqual([
     'What films should an aspiring journalist watch?',
     'What books should an aspiring journalist read?',
     'Media glare can enrich tennis pros yet imperil mental health',
@@ -38,14 +38,4 @@ test("If Sort Function is working in descending" ,() =>{
     'Buried underpants and tea bags help scientists evaluate soil',
     "'Nightmare' TV show 'Euphoria — health threat or high art?"
   ]);
-});
-test("If search value is correct?.", () => {
-    expect(search("'Nightmare' TV show 'Euphoria — health threat or high art?")).toEqual(["'Nightmare' TV show 'Euphoria — health threat or high art?"]);
-});
-test("If search value is correct?.", () => {
-  expect(search("Decoder")).toEqual(['Decoder: Mining asteroids for minerals can help spare Earth',
-  'Decoder: Armenia in a bind as Ukraine war resets global order']);
-});
-test("If search value is correct?.", () => {
-  expect(search("What")).toEqual(['What films should an aspiring journalist watch?','What books should an aspiring journalist read?']);
 });
